@@ -7,8 +7,10 @@
 思路参考[sorry](https://github.com/xtyxtyx/sorry)，目前已有[Ruby](https://github.com/xtyxtyx/sorry)、[Python](https://github.com/East196/sorrypy)、[Java](https://github.com/li24361/sorryJava)，目前比较火的nodejs当然不能缺席！
 
 node-sorry 使用的技术栈：
-1、nodejs 8.1 + express 4 + ejs
-2、Express Generator
+- 1、nodejs 8.1 + express 4 + ejs
+- 2、Express Generator
+
+演示地址：[DEMO](http://119.23.239.110:3000)
 
 `sorry客户真的可以为所欲为`样例：
 
@@ -93,11 +95,16 @@ $ npm run start
 
 ### CentOS7下ffmpeg安装
 ```
-yum install epel-release -y
-rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
-rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
-yum install ffmpeg ffmpeg-devel -y
+wget https://ffmpeg.org/releases/ffmpeg-3.4.2.tar.bz2
+yum -y install bzip2
+yum -y install yasm
+tar -xf ffmpeg-3.4.2.tar.bz2
+cd ffmpeg-3.4.2
+./configure
+make
+make install
 ```
+安装完成后，输入命令ffmpeg检查是否成功
 
 ### CentOS7下yum安装node8
 首先用node -v检查是否安装或者版本过低
