@@ -105,6 +105,9 @@ make install
 ```
 安装完成后，输入命令ffmpeg检查是否成功
 
+特别注意：此时生成的gif文字会乱码，因为CentOS7缺少中文字体
+[安装字体](https://blog.csdn.net/wlwlwlwl015/article/details/51482065)
+
 ### CentOS7下yum安装node8
 首先用node -v检查是否安装或者版本过低
  卸载
