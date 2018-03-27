@@ -22,7 +22,6 @@ function makeGifWithFfmpeg(templateName, sentences, filename) {
     videoPath = "./public/templates/" + templateName + "/template.mp4"
     console.log(assPath, gifPath, videoPath)
     var cmd = "ffmpeg -i " + videoPath + " -r 8 -vf ass=." + assPath + ",scale=300:-1 -y " + gifPath
-    cmd = path.resolve(cmd).replace(eval(/\\/g), '/') //cmd只能识别window路径
     console.log(cmd);
     try {
         execSync(cmd);
